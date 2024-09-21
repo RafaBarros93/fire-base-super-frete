@@ -8,11 +8,9 @@ export class FirestoreService {
         let nextId = 1;
 
         await this.db.runTransaction(async (transaction) => {
-            const incrementDoc = await transaction.get(incrementRef);
+            const { exists, data } = await transaction.get(incrementRef);
 
-            if (incrementDoc.exists) {
-                nextId = incrementDoc.data()?.lastId + 1 || 1;
-            }
+            if (exists) nextId = data()!.lastId++ || 1;
 
             transaction.set(incrementRef, { lastId: nextId }, { merge: true });
         });

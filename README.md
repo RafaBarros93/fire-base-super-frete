@@ -49,13 +49,9 @@
    <p>Certifique-se de que o projeto está configurado corretamente para o TypeScript. O arquivo <code>tsconfig.json</code> já está incluído, mas você pode compilar o código TypeScript manualmente:</p>
     <pre><code>npm run build</code></pre>
 
-   <li><strong>Iniciar o Firebase Emulator (Opcional)</strong></li>  
+   <li><strong>Iniciar o Firebase Emulator</strong></li>  
    <p>Para rodar o projeto localmente com o Firebase Emulator, execute:</p>
-    <pre><code>firebase emulators:start</code></pre>
-  
-  <li><strong>Deploy no Firebase (Opcional)</strong></li>  
-   <p>firebase deploy --only functions:</p>
-    <pre><code>firebase deploy --only functions</code></pre>
+    <pre><code> npm start</code></pre>
 
  <li><strong>Testes Automatizados</strong></li>
  <p>Para rodar os testes automatizados incluídos no projeto:</p>
